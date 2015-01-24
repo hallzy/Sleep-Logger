@@ -1,0 +1,11 @@
+This is a Sleep Logging program that I developed for my uncle, who after a
+major skiing accident has had trouble staying asleep due to discomfort.
+As a result, when he wakes up, he makes sure he takes note of what time
+of the night he woke up at, along with some notes.
+
+Before having this program, he would have to write it down on a piece of
+paper after turning the lights on (and basically waking up) making it
+harder for him to get back to sleep.
+
+This easy to use program logs the time of the night at which the user 
+clicks the enter button, and makes a text file with all the data.

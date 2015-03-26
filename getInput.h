@@ -1,5 +1,5 @@
-#ifndef __GETINPUT_H_INCLUDED__   
-#define __GETINPUT_H_INCLUDED__ 
+#ifndef __GETINPUT_H_INCLUDED__
+#define __GETINPUT_H_INCLUDED__
 
 #include <string>
 

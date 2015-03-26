@@ -13,7 +13,7 @@ StartTime::StartTime(){
 	unixTime = 0;
 }
 
-//The following are all setter and getter methods for each of the 
+//The following are all setter and getter methods for each of the
 //four variables that are initialized in the constructor
 void StartTime::setHour(int x){
 	hour = x;
@@ -43,11 +43,11 @@ int StartTime::getUnixTime(){
 	return unixTime;
 }
 
-// Updates the DeltaTime 
+// Updates the DeltaTime
 DeltaTime UpdateDeltaClass(DeltaTime deltaTime, StartTime startTime){
 	deltaTime.setUnixTime(time(NULL) - startTime.getUnixTime());
 
-	// If the number of seconds that has passed is greater than 
+	// If the number of seconds that has passed is greater than
 	// or equal to 60...
 	if(deltaTime.getUnixTime() >= 60){
 		 // set the minutes that have passed

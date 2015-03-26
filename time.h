@@ -1,5 +1,5 @@
-#ifndef __TIME_H_INCLUDED__   
-#define __TIME_H_INCLUDED__ 
+#ifndef __TIME_H_INCLUDED__
+#define __TIME_H_INCLUDED__
 
 // Holds all the information for the time that the program was started
 class StartTime {
@@ -7,7 +7,7 @@ public:
 	// Constructor
 	StartTime();
 
-	//Setter and getter methods for the four variables defined 
+	//Setter and getter methods for the four variables defined
 	// below as private variables
 	void setHour(int);
 	int getHour();

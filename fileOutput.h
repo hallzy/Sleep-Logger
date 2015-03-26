@@ -1,6 +1,6 @@
 
-#ifndef __FILEOUTPUT_H_INCLUDED__   
-#define __FILEOUTPUT_H_INCLUDED__ 
+#ifndef __FILEOUTPUT_H_INCLUDED__
+#define __FILEOUTPUT_H_INCLUDED__
 
 #include "time.h"
 

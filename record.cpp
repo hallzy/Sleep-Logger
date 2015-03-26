@@ -21,7 +21,7 @@ void Record(StartTime startTime, DeltaTime deltaTime, WakeTime wakeTime, toFile 
 			deltaTime = UpdateDeltaClass(deltaTime, startTime);
 			// Updates the time at which the enter button was pressed
 			wakeTime = UpdateWakeClass(deltaTime, startTime, wakeTime);
-			
+
 						// In the ToFile Class
 			fileObj.PrintTheTimeWhenEnterWasClicked(wakeTime, deltaTime);
 		}

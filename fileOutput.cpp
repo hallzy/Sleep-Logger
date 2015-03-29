@@ -13,7 +13,7 @@ std::ofstream outf("Sleep Log.txt"); // The text File that we will be using
 // Methods that are used to print information to the file.
 
 // This method prints the top piece of the file
-void toFile::PrintTopOfFile(StartTime start){
+void toFile::PrintTopOfFile(StartTime start) {
 	//Output to text file
 	outf << "Start Time: " << start.getHour() <<":" << std::setw(2)
 		 << std::setfill('0') << start.getMinute() << ":" << std::setw(2)
@@ -24,7 +24,7 @@ void toFile::PrintTopOfFile(StartTime start){
 		 << std::endl << std::endl;
 }
 //This method prints the new recorded data to the screen and to the file
-void toFile::PrintTheTimeWhenEnterWasClicked(WakeTime wake, DeltaTime delta){
+void toFile::PrintTheTimeWhenEnterWasClicked(WakeTime wake, DeltaTime delta) {
 	std::cout << "Time of the Night: " << wake.getHour() << ":" << std::setw(2) << std::setfill('0')
 		 << wake.getMinute() << ":" << std::setw(2) << std::setfill('0') << wake.getSeconds() << std::endl;
 
@@ -37,3 +37,4 @@ void toFile::PrintTheTimeWhenEnterWasClicked(WakeTime wake, DeltaTime delta){
 		 << wake.getHour() << ":" << std::setw(2) << std::setfill('0') << wake.getMinute() << ":"
 		 << std::setw(2) << std::setfill('0') << wake.getSeconds() << std::endl;
 }
+

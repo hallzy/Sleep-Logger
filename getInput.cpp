@@ -11,3 +11,4 @@ std::string GetInput() {
 	getline(std::cin, input); // Gets a String Input
 	return input;
 }
+

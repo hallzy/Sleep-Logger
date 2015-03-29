@@ -43,9 +43,8 @@ private:
 
 };
 
-
-
 DeltaTime UpdateDeltaClass(DeltaTime, StartTime);
 WakeTime UpdateWakeClass(DeltaTime, StartTime, WakeTime);
 
 #endif
+

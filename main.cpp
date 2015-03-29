@@ -10,7 +10,6 @@
 #include "fileOutput.h" // All the methods related to sending information to the text file
 #include "record.h" // The part of the program that displays and records the times.
 
-
 int main() {
 
 	int input; // Temporary holding place for the integer inputs.
@@ -39,34 +38,4 @@ int main() {
 	return 0;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

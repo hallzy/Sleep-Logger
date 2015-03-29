@@ -5,7 +5,7 @@
 
 // Holds all the information for the time that the program was started
 //Constructor, initializes the 4 variables
-StartTime::StartTime(){
+StartTime::StartTime() {
 	// each object gets these, all initialized to zero.
 	hour = 0;
 	minute = 0;
@@ -15,47 +15,47 @@ StartTime::StartTime(){
 
 //The following are all setter and getter methods for each of the
 //four variables that are initialized in the constructor
-void StartTime::setHour(int x){
+void StartTime::setHour(int x) {
 	hour = x;
 }
-int StartTime::getHour(){
+int StartTime::getHour() {
 	return hour;
 }
 
-void StartTime::setMinute(int x){
+void StartTime::setMinute(int x) {
 	minute = x;
 }
-int StartTime::getMinute(){
+int StartTime::getMinute() {
 	return minute;
 }
 
-void StartTime::setSeconds(int x){
+void StartTime::setSeconds(int x) {
 	seconds = x;
 }
-int StartTime::getSeconds(){
+int StartTime::getSeconds() {
 	return seconds;
 }
 
-void StartTime::setUnixTime(int x){
+void StartTime::setUnixTime(int x) {
 	unixTime = x;
 }
-int StartTime::getUnixTime(){
+int StartTime::getUnixTime() {
 	return unixTime;
 }
 
 // Updates the DeltaTime
-DeltaTime UpdateDeltaClass(DeltaTime deltaTime, StartTime startTime){
+DeltaTime UpdateDeltaClass(DeltaTime deltaTime, StartTime startTime) {
 	deltaTime.setUnixTime(time(NULL) - startTime.getUnixTime());
 
 	// If the number of seconds that has passed is greater than
 	// or equal to 60...
-	if(deltaTime.getUnixTime() >= 60){
+	if (deltaTime.getUnixTime() >= 60) {
 		 // set the minutes that have passed
 		deltaTime.setMinute(deltaTime.getUnixTime()/60);
 
 		// Now if the number of minutes that have passed is greater
 		 // than or equal to 60...
-		if(deltaTime.getMinute() >= 60){
+		if (deltaTime.getMinute() >= 60) {
 			// Set the hours that have passed and...
 			deltaTime.setHour(deltaTime.getMinute()/60);
 			// reset the number of minutes to 0.
@@ -73,7 +73,7 @@ DeltaTime UpdateDeltaClass(DeltaTime deltaTime, StartTime startTime){
 }
 
 //updates the wakeTime
-WakeTime UpdateWakeClass(DeltaTime deltaTime, StartTime startTime, WakeTime wakeTime){
+WakeTime UpdateWakeClass(DeltaTime deltaTime, StartTime startTime, WakeTime wakeTime) {
 	// The time woken up is the starting time added to the change in time from then
 	// until now, thus...
 	wakeTime.setSeconds(deltaTime.getSeconds() + startTime.getSeconds());
@@ -86,19 +86,20 @@ WakeTime UpdateWakeClass(DeltaTime deltaTime, StartTime startTime, WakeTime wake
 
 	// This stops the seconds from exceeding 59, by reducing the seconds by 60,
 	// and adding 1 to the number of minutes.
-	if(wakeTime.getSeconds() >= 60){
+	if (wakeTime.getSeconds() >= 60) {
 		wakeTime.setSeconds(wakeTime.getSeconds() - 60);
 		wakeTime.setMinute(wakeTime.getMinute() + 1);
 	}
 	// This stop sthe minutes from exceeding 59, by reducing the minutes by 60,
 	// and adding 1 to the number of hours.
-	if(wakeTime.getMinute() >= 60){
+	if (wakeTime.getMinute() >= 60) {
 		wakeTime.setMinute(wakeTime.getMinute() - 60);
 		wakeTime.setHour(wakeTime.getHour() + 1);
 	}
 	// If hours exceed 12, we reset the hours to 1.
-	if(wakeTime.getHour() > 12){
+	if (wakeTime.getHour() > 12) {
 		wakeTime.setHour(1);
 	}
 	return wakeTime;
 }
+

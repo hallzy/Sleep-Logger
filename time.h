@@ -4,24 +4,24 @@
 // Holds all the information for the time that the program was started
 class StartTime {
 public:
-	// Constructor
-	StartTime();
+  // Constructor
+  StartTime();
 
-	//Setter and getter methods for the four variables defined
-	// below as private variables
-	void setHour(int);
-	int getHour();
-	void setMinute(int);
-	int getMinute();
-	void setSeconds(int);
-	int getSeconds();
-	void setUnixTime(int);
-	int getUnixTime();
+  //Setter and getter methods for the four variables defined
+  // below as private variables
+  void setHour(int);
+  int getHour();
+  void setMinute(int);
+  int getMinute();
+  void setSeconds(int);
+  int getSeconds();
+  void setUnixTime(int);
+  int getUnixTime();
 private:
-	int hour;
-	int minute;
-	int seconds;
-	int unixTime;
+  int hour;
+  int minute;
+  int seconds;
+  int unixTime;
 };
 
 
